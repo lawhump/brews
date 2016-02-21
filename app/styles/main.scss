@@ -1,6 +1,17 @@
 // bower:scss
+@import "../../bower_components/susy/sass/_susy.scss";
 // endbower
-@import 'jeet/index';
+
+/* Changing Susy default global settings */
+$susy: (
+  columns: 12,
+  container: 1120px,
+	gutters: 0,
+  global-box-sizing: border-box
+  );
+
+/* Makes border-box properties */
+@include border-box-sizing;
 
 $brews-width: 1200px;
 
@@ -20,16 +31,15 @@ body {
 }
 
 h1 {
-  font-size: 48px;
+  font-size: 7.2rem;
   line-height: 1.3;
 }
 
-h2, p, a {
+ul {
+  list-style: none;
   margin: 0;
   padding: 0;
 }
-
-
 
 .hero-unit {
   margin: 50px auto 0 auto;
@@ -84,82 +94,66 @@ h2, p, a {
  }
 
 .landing {
+	@include container;
   h1 {
-    margin: 100px 0 100px 5%;
+    margin: 100px 0 100px 0;
     width: 40%;
   }
 }
 
 .brews {
-  overflow: hidden;
-  margin: 0 auto;
-  max-width: $brews-width;
-  width: 100%;
-
-  figure {
-    display: inline-block;
-    float: left;
-    margin: 0;
-    max-width: $brews-width/2;
-    overflow: hidden;
-    padding: 0;
-    position: relative;
-    width: 50%;
-  }
-
-  @media all and (max-width: 998px) {
-    figure {
-      max-width: 100%;
-      width: 100%;
-    }
-  }
-
-  img {
-    max-height: 700px;
-    width: 100%;
-  }
-
-  figcaption {
-    display: -webkit-flex;
-  	display: flex;
-  	-webkit-flex-flow: column wrap;
-  	flex-flow: column wrap;
-  	-webkit-justify-content: center;
-  	justify-content:center;
-    // left: 50%;
-    margin: 0 auto;
-    opacity: 0;
-    // position: absolute;
-    text-align: center;
-    // top: 50%;
-    // transform: translate(-50%, -40%);
-    // transition: transform .3s ease-in-out;
-  }
-}
-
-.overlay {
-  height: 100%;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 100%;
+	@include container;
 }
 
 .brew {
-  background-color: rgba(0,0,0,0);
-  transition: background-color .3 ease-in-out;
+	@include span(6);
+	display: inline-block;
+	margin-bottom: -.7rem;
+  overflow: hidden;
+  text-align: center;
+
+  figure {
+		color: #fff;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    text-align: center;
+  }
+
+  figcaption {
+    left: 50%;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -35%);
+    transition: opacity .3s ease-in-out, transform .3s ease-in-out;
+  }
+
+  img {
+		max-height: 40rem;
+    transition: all .4s ease-in-out;
+		width: 100%;
+  }
 
   &:hover {
-
     figcaption {
-      // -webkit-animation: fadeIn .8s; /* Safari 4+ */
-      // -moz-animation:    fadeIn .8s; /* Fx 5+ */
-      // -o-animation:      fadeIn .8s; /* Opera 12+ */
-      // animation:         fadeIn .8s; /* IE 10+, Fx 29+ */
-      // animation-fill-mode: forwards;
-      // opacity: 1;
+      opacity: 1;
+      transform: translate(-50%, -50%);
+    }
+
+    img {
+      -webkit-filter: blur(2px) grayscale(70%) brightness(70%);
+      filter: blur(5px) grayscale(70%) brightness(70%);
     }
   }
+}
+
+@media only screen and (max-width: 1120px) {
+	.landing {
+		h1 {
+			margin-left: 5%;
+		}
+	}
 }
 
 footer {
