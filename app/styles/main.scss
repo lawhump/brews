@@ -2,6 +2,8 @@
 @import "../../bower_components/susy/sass/_susy.scss";
 // endbower
 
+@import "button";
+
 /* Changing Susy default global settings */
 $susy: (
   columns: 12,
@@ -97,8 +99,41 @@ ul {
 	@include container;
   h1 {
     margin: 100px 0 100px 0;
-    width: 40%;
+		max-width: 37.2rem;
+    width: 90%;
   }
+}
+
+@media only screen and (max-width: 1120px) {
+	.landing {
+		h1 {
+			margin-left: 5%;
+		}
+	}
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+	html { font-size: 60%}
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+	html { font-size: 58%}
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+
 }
 
 .brews {
@@ -148,15 +183,17 @@ ul {
   }
 }
 
-@media only screen and (max-width: 1120px) {
-	.landing {
-		h1 {
-			margin-left: 5%;
+@media only screen and (max-width: 666px) {
+	.brew {
+		@include span(12);
+
+		img {
+			max-height: none;
 		}
 	}
 }
 
 footer {
-  margin: 100px 0;
+  margin: 18rem 0;
   text-align: center;
 }
