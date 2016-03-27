@@ -16,7 +16,7 @@ body {
 }
 
 h1 {
-  font-size: 7.2rem;
+  font-size: 5rem;
   line-height: 1.3;
 }
 
@@ -72,10 +72,13 @@ ul {
 }
 
 .landing {
-  h1 {
-    margin: 100px 0 100px 5%;
-		max-width: 37.2rem;
-    width: 90%;
+  margin: 100px auto 100px auto;
+	max-width: 60rem;
+  text-align: justify;
+  width: 90%;
+
+  h1, h3 {
+    text-align: center;
   }
 }
 
