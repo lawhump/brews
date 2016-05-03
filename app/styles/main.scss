@@ -6,7 +6,7 @@ html { font-size: 62.5%; }
 
 body {
   background: #fafafa;
-  color: #333;
+  color: #4d4d4d;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-size: 1.6rem;
 	line-height: 2.56rem;
@@ -21,7 +21,7 @@ h1 {
 }
 
 a {
-  color: #111;
+  color: #333;
   font-weight: bold;
   text-decoration: none;
 }
@@ -75,11 +75,16 @@ ul {
   margin: 100px auto 100px auto;
 	max-width: 60rem;
   text-align: justify;
-  width: 90%;
+  width: 80%;
 
   h1, h3 {
     text-align: center;
   }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+  .landing { margin: 10% auto 100px auto; }
 }
 
 /* Large Devices, Wide Screens */
@@ -102,7 +107,7 @@ ul {
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px) {
-  font-size: 50%;
+  html { font-size: 50%; }
 }
 
 .brews {
@@ -193,6 +198,14 @@ ul {
 
 .newcastle {
   background-color: #B3F1F3;
+}
+
+.yuengling {
+  background-color: #A8BFA8;
+}
+
+.stella {
+  background-color: #B3CEBB;
 }
 
 @media only screen and (max-width: 666px) {
