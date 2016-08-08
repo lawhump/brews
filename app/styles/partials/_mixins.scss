@@ -1,0 +1,63 @@
+@mixin font-face-GT($name, $weight, $style: normal) {
+  @font-face {
+    font-family: "GT-Walsheim-Pro";
+    font-weight: $weight;
+    font-style: $style;
+    src: url("../fonts/GT-Walsheim/GT-Walsheim-Pro-#{$name}.eot") format("eot"),
+         url("../fonts/GT-Walsheim/GT-Walsheim-Pro-#{$name}.woff2") format("woff2"),
+         url("../fonts/GT-Walsheim/GT-Walsheim-Pro-#{$name}.woff") format("woff"),
+         url("../fonts/GT-Walsheim/GT-Walsheim-Pro-#{$name}.ttf") format("truetype"),
+         url("../fonts/GT-Walsheim/GT-Walsheim-Pro-#{$name}.svg") format("svg");
+  }
+}
+
+@mixin font-face-Leitura($name, $weight, $style: normal) {
+  @font-face {
+    font-family: "Leitura Display";
+    font-weight: $weight;
+    font-style: $style;
+    src: url("../fonts/Leitura-Display/#{$name}.eot") format("eot"),
+         url("../fonts/Leitura-Display/#{$name}.woff2") format("woff2"),
+         url("../fonts/Leitura-Display/#{$name}.woff") format("woff"),
+         url("../fonts/Leitura-Display/#{$name}.ttf") format("truetype"),
+         url("../fonts/Leitura-Display/#{$name}.svg") format("svg");
+  }
+}
+
+@mixin animation($animate...) {
+    $max: length($animate);
+    $animations: '';
+
+    @for $i from 1 through $max {
+        $animations: #{$animations + nth($animate, $i)};
+
+        @if $i < $max {
+            $animations: #{$animations + ", "};
+        }
+    }
+    -webkit-animation: $animations;
+    -moz-animation:    $animations;
+    -o-animation:      $animations;
+    animation:         $animations;
+}
+
+@mixin keyframes($animationName) {
+    @-webkit-keyframes #{$animationName} {
+        @content;
+    }
+    @-moz-keyframes #{$animationName} {
+        @content;
+    }
+    @-o-keyframes #{$animationName} {
+        @content;
+    }
+    @keyframes #{$animationName} {
+        @content;
+    }
+}
+
+@mixin setWidthAndCenter() {
+  margin: 0 auto;
+  max-width: $max-width;
+  width: $width;
+}
