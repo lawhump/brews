@@ -26,7 +26,7 @@ function getBrews(url, callback) {
 
 function initBrews(json) {
   brews = JSON.parse(json);
-  max = brews.length;
+  max = brews.length - 1;
   console.dir(brews);
 }
 
