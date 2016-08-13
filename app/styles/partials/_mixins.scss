@@ -1,4 +1,4 @@
-@mixin font-face-GT($filename, $weight: normal, $style: normal) {
+@mixin font-face-Walsheim($filename, $weight: normal, $style: normal) {
   @font-face {
     font-family: "GT Walsheim";
     font-weight: $weight;
@@ -8,6 +8,19 @@
          url("../fonts/GT-Walsheim/#{$filename}.woff") format("woff"),
          url("../fonts/GT-Walsheim/#{$filename}.ttf") format("truetype"),
          url("../fonts/GT-Walsheim/#{$filename}.svg") format("svg");
+  }
+}
+
+@mixin font-face-Sectra($filename, $weight: normal, $style: normal) {
+  @font-face {
+    font-family: "GT Sectra";
+    font-weight: $weight;
+    font-style: $style;
+    src: url("../fonts/GT-Sectra/#{$filename}.eot") format("eot"),
+         url("../fonts/GT-Sectra/#{$filename}.woff2") format("woff2"),
+         url("../fonts/GT-Sectra/#{$filename}.woff") format("woff"),
+         url("../fonts/GT-Sectra/#{$filename}.ttf") format("truetype"),
+         url("../fonts/GT-Sectra/#{$filename}.svg") format("svg");
   }
 }
 
@@ -24,7 +37,8 @@
   }
 }
 
-@include font-face-GT('GT-Walsheim-Regular','normal', 'normal');
+@include font-face-Walsheim('GT-Walsheim-Regular','normal', 'normal');
+@include font-face-Sectra('GT-Sectra-Bold','bold', 'normal');
 @include font-face-Leitura('LeituraDisplay-Roman','normal', 'normal');
 
 @mixin animation($animate...) {

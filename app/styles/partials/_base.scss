@@ -26,8 +26,14 @@ h1 {
 }
 
 h3 {
+  font-family: 'GT Sectra', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 1.4rem;
+  letter-spacing: 1px;
   text-transform: uppercase;
+}
+
+h4 {
+  font-family: 'GT Sectra', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 a {
@@ -107,7 +113,6 @@ footer {
   h4 {
     color: $font-color-lite;
     margin: 0;
-    text-transform: uppercase;
   }
 
   p {
