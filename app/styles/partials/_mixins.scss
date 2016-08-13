@@ -1,28 +1,31 @@
-@mixin font-face-GT($name, $weight, $style: normal) {
+@mixin font-face-GT($filename, $weight: normal, $style: normal) {
   @font-face {
-    font-family: "GT-Walsheim";
+    font-family: "GT Walsheim";
     font-weight: $weight;
     font-style: $style;
-    src: url("../fonts/GT-Walsheim/GT-Walsheim-#{$name}.eot") format("eot"),
-         url("../fonts/GT-Walsheim/GT-Walsheim-#{$name}.woff2") format("woff2"),
-         url("../fonts/GT-Walsheim/GT-Walsheim-#{$name}.woff") format("woff"),
-         url("../fonts/GT-Walsheim/GT-Walsheim-#{$name}.ttf") format("truetype"),
-         url("../fonts/GT-Walsheim/GT-Walsheim-#{$name}.svg") format("svg");
+    src: url("../fonts/GT-Walsheim/#{$filename}.eot") format("eot"),
+         url("../fonts/GT-Walsheim/#{$filename}.woff2") format("woff2"),
+         url("../fonts/GT-Walsheim/#{$filename}.woff") format("woff"),
+         url("../fonts/GT-Walsheim/#{$filename}.ttf") format("truetype"),
+         url("../fonts/GT-Walsheim/#{$filename}.svg") format("svg");
   }
 }
 
-@mixin font-face-Leitura($name, $weight, $style: normal) {
+@mixin font-face-Leitura($filename, $weight: normal, $style: normal) {
   @font-face {
     font-family: "Leitura Display";
     font-weight: $weight;
     font-style: $style;
-    src: url("../fonts/Leitura-Display/#{$name}.eot") format("eot"),
-         url("../fonts/Leitura-Display/#{$name}.woff2") format("woff2"),
-         url("../fonts/Leitura-Display/#{$name}.woff") format("woff"),
-         url("../fonts/Leitura-Display/#{$name}.ttf") format("truetype"),
-         url("../fonts/Leitura-Display/#{$name}.svg") format("svg");
+    src: url("../fonts/Leitura-Display/#{$filename}.eot") format("eot"),
+         url("../fonts/Leitura-Display/#{$filename}.woff2") format("woff2"),
+         url("../fonts/Leitura-Display/#{$filename}.woff") format("woff"),
+         url("../fonts/Leitura-Display/#{$filename}.ttf") format("truetype"),
+         url("../fonts/Leitura-Display/#{$filename}.svg") format("svg");
   }
 }
+
+@include font-face-GT('GT-Walsheim-Regular','normal', 'normal');
+@include font-face-Leitura('LeituraDisplay-Roman','normal', 'normal');
 
 @mixin animation($animate...) {
     $max: length($animate);

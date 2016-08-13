@@ -1,11 +1,9 @@
-@include font-face-GT('Regular', 'normal', 'normal');
-
 html { font-size: 62.5%; }
 
 body {
   background-color: #fafafa;
   color: #4d4d4d;
-  font-family: 'GT-Walsheim', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'GT Walsheim', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-size: 1.6rem;
 	line-height: 2.56rem;
   margin: 0;
@@ -21,7 +19,9 @@ html, body {
 }
 
 h1 {
+  font-family: 'Leitura Display', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 8.5rem;
+  font-weight: 100;
   line-height: 1.3;
 }
 
