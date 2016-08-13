@@ -1,13 +1,13 @@
 @mixin font-face-GT($name, $weight, $style: normal) {
   @font-face {
-    font-family: "GT-Walsheim-Pro";
+    font-family: "GT-Walsheim";
     font-weight: $weight;
     font-style: $style;
-    src: url("../fonts/GT-Walsheim/GT-Walsheim-Pro-#{$name}.eot") format("eot"),
-         url("../fonts/GT-Walsheim/GT-Walsheim-Pro-#{$name}.woff2") format("woff2"),
-         url("../fonts/GT-Walsheim/GT-Walsheim-Pro-#{$name}.woff") format("woff"),
-         url("../fonts/GT-Walsheim/GT-Walsheim-Pro-#{$name}.ttf") format("truetype"),
-         url("../fonts/GT-Walsheim/GT-Walsheim-Pro-#{$name}.svg") format("svg");
+    src: url("../fonts/GT-Walsheim/GT-Walsheim-#{$name}.eot") format("eot"),
+         url("../fonts/GT-Walsheim/GT-Walsheim-#{$name}.woff2") format("woff2"),
+         url("../fonts/GT-Walsheim/GT-Walsheim-#{$name}.woff") format("woff"),
+         url("../fonts/GT-Walsheim/GT-Walsheim-#{$name}.ttf") format("truetype"),
+         url("../fonts/GT-Walsheim/GT-Walsheim-#{$name}.svg") format("svg");
   }
 }
 
