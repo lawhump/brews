@@ -8,6 +8,7 @@
   text-align: left;
   position: relative;
   margin-bottom: 22px;
+  width: 100%;
 }
 .csslider > input {
   display: none;
@@ -42,15 +43,20 @@
   line-height: normal;
   overflow: hidden;
   position: relative;
-  transition: all 0.5s cubic-bezier(0.465, 0.183, 0.153, 0.946);
+  transition: all .5s cubic-bezier(0.465, 0.183, 0.153, 0.946);
   vertical-align: top;
   white-space: normal;
   width: 100%;
 
   &:first-of-type {
     background: url('../images/00-dosEquis.png') no-repeat;
-    margin-top: 7.5%;
+    margin-top: 10.5%;
   }
+}
+
+.csslider img {
+  height: auto;
+  width: 100%;
 }
 
 .csslider > .navigation {
