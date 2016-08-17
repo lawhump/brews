@@ -20,7 +20,7 @@ function getBrews(url, callback) {
       callback(xmlHttp.responseText);
     }
   }
-  xmlHttp.open('GET', url, true); // true for asynchronous
+  xmlHttp.open('GET', url, true);
   xmlHttp.send(null);
 }
 
@@ -87,14 +87,12 @@ function showInfo() {
   }
 
   function changeText() {
-    // brewName.classList.add('fadeOut');
     taste.classList.add('fadeOut');
     complements.classList.add('fadeOut');
     description.classList.add('fadeOut');
 
 
     window.setTimeout(function() {
-      // brewName.innerText = brews[counter]["name"];
       taste.innerText = brews[counter].taste;
       complements.innerText = brews[counter].complements;
       description.innerText = brews[counter].description;
