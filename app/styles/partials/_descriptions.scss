@@ -1,10 +1,24 @@
 .descriptions {
 
-  .name,
   .taste,
   .complements,
   .description {
     opacity: 1;
-    transition: opacity .3s ease-out;
+    transition: opacity .3s cubic-bezier(0.77, 0, 0.175, 1);
+  }
+
+  .name {
+    height: 8.7rem;
+    margin: 7rem 0;
+    overflow: hidden;
+
+    h1 {
+      margin: 0;
+      padding-top: .2rem;
+    }
+
+    li {
+      transition: transform .2s cubic-bezier(0.77, 0, 0.175, 1) .2s;
+    }
   }
 }
