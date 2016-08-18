@@ -1,7 +1,7 @@
 [
   {
     "name": "Dos Equis",
-    "bgColor": "#fafafa",
+    "bgColor": "#f4fff8",
     "taste": "Paradise, Beaches",
     "complements": "Limes, Chicken Wings",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac mauris at erat tempor iaculis sit amet blandit odio. Nunc id sagittis ligula."
@@ -15,7 +15,7 @@
   },
   {
     "name": "Red Stripe",
-    "bgColor": "#fafafa",
+    "bgColor": "#e0ebff",
     "taste": "Paradise, Beaches",
     "complements": "Limes, Chicken Wings",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac mauris at erat tempor iaculis sit amet blandit odio. Nunc id sagittis ligula."
@@ -53,7 +53,7 @@
     "bgColor": "#fafafa",
     "taste": "Paradise, Beaches",
     "complements": "Limes, Chicken Wings",
-    "description": "Hop character coats with a leafy feel on the palate, yielding a delicate noble hop bitterness, as well as a touch of cheesiness and pithiness. This melds with spicy phenols, which lends a slight medicinal flavor that wanders within the spicy alcohol and heat. Finish is very dry, with residual yeast and crackery lingers."
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac mauris at erat tempor iaculis sit amet blandit odio. Nunc id sagittis ligula."
   },
   {
     "name": "Molson",
