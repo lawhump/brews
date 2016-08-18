@@ -1,7 +1,7 @@
 [
   {
     "name": "Dos Equis",
-    "bgColor": "#fafafa",
+    "bgColor": "#f4fff8",
     "taste": "Paradise, Beaches",
     "complements": "Limes, Memes",
     "description": "Dos Equis is a lager that was originally brewed by the German-born Mexican brewer Wilhelm Hasse in 1894. The brand was named Siglo XX (\"20th century\") to commemorate the arrival of the new century, and the bottles were marked with the Roman numeral for 20 (\"XX\"), thus \"Dos Equis\" which is Spanish for \"two Xs\"."
@@ -15,7 +15,7 @@
   },
   {
     "name": "Red Stripe",
-    "bgColor": "#fafafa",
+    "bgColor": "#e0ebff",
     "taste": "Paradise, Beaches",
     "complements": "Limes, Chicken Wings",
     "description": "Red Stripe is a 4.7% ABV pale lager brewed by Desnoes & Geddes in Jamaica. It was first produced in 1938 from a recipe developed by Paul H. Cotter and Bill Martindale."
