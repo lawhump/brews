@@ -13,6 +13,16 @@ var complements  = descriptions.querySelector('.complements');
 var description  = descriptions.querySelector('.description');
 
 
+function indexOfNode(node) {
+  var children = node.parentNode.childNodes;
+  var num = 0;
+  for (var i=0; i<children.length; i++) {
+     if (children[i]==node) return num;
+     if (children[i].nodeType==1) num++;
+  }
+  return -1;
+}
+
 function getBrews(url, callback) {
   var xmlHttp = new XMLHttpRequest();
   xmlHttp.onreadystatechange = function() {
@@ -111,6 +121,46 @@ function showInfo() {
   getBrews('brews.json', initBrews);
 })();
 
+
 prev.addEventListener('click', showPrevBrew);
 
 next.addEventListener('click', showNextBrew);
+
+document.querySelector('.navigation').addEventListener('click', function(e) {
+  function backwardBy(iters) {
+    for (var i=0; i<iters; i++) {
+      showPrevBrew();
+    }
+  }
+
+  function forwardBy(iters) {
+    for (var i=0; i<iters; i++) {
+      showNextBrew();
+    }
+  }
+
+  function goToBrew() {
+    var target = indexOfNode(e.target.parentNode.parentNode);
+    console.log(target);
+
+    if (target >= counter) {
+      var iterations = target - counter;
+      forwardBy(iterations);
+    }
+
+    else {
+      var iterations = counter - target;
+      backwardBy(iterations);
+    }
+  }
+
+  function toggleActive() {
+    document.querySelector('.navigation .active').classList.remove('active');
+    e.target.classList.add('active');
+  }
+
+  if(e.target && e.target.nodeName == 'SPAN') {
+    goToBrew();
+    toggleActive();
+  }
+});

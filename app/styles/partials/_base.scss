@@ -121,9 +121,7 @@ footer {
   }
 }
 
-.images {
-  // position: relative;
-}
+.images { }
 
 .wrapper {
   height: 100vh;
@@ -145,6 +143,26 @@ footer {
   bottom: 3rem;
   position: absolute;
   right: 3%;
+}
+
+.navigation-container {
+  left: 95%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-55%);
+
+  li {
+    line-height: 1.15;
+  }
+
+  span {
+    color: #bbb;
+    transition: color .3s ease-out;
+
+    &.active {
+      color: #555;
+    }
+  }
 }
 
 .prev {
