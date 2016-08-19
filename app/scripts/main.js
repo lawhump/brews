@@ -34,6 +34,29 @@ function getBrews(url, callback) {
   xmlHttp.send(null);
 }
 
+function toggleActive(forward) {
+  var curr = document.querySelector('.navigation .active');
+
+  if (forward) {
+    curr.classList.remove('active');
+    var next = curr.parentNode.parentNode.nextSibling.nextSibling; // ????
+    if (next === null) {
+      next = document.querySelector('.navigation').firstChild.nextSibling;
+      console.log(next);
+    }
+    next.querySelector('span').classList.add('active');
+  }
+
+  else {
+    curr.classList.remove('active');
+    var prev = curr.parentNode.parentNode.previousSibling.previousSibling; // ????
+    if (prev === null) {
+      prev = document.querySelector('.navigation').lastChild.previousSibling;
+    }
+    prev.querySelector('span').classList.add('active');
+  }
+}
+
 function initBrews(json) {
   function initBrewNames() {
     for (var i=0; i<=max; i++) {
@@ -67,6 +90,7 @@ function showNextBrew() {
 
   elemForwards();
   showInfo();
+  toggleActive(true);
 }
 
 function showPrevBrew() {
@@ -89,6 +113,7 @@ function showPrevBrew() {
 
   elemBackwards();
   showInfo();
+  toggleActive(false);
 }
 
 function showInfo() {
@@ -140,8 +165,7 @@ document.querySelector('.navigation').addEventListener('click', function(e) {
   }
 
   function goToBrew() {
-    var target = indexOfNode(e.target.parentNode.parentNode);
-    console.log(target);
+    var target = indexOfNode(e.target.parentNode);
 
     if (target >= counter) {
       var iterations = target - counter;
@@ -154,13 +178,8 @@ document.querySelector('.navigation').addEventListener('click', function(e) {
     }
   }
 
-  function toggleActive() {
-    document.querySelector('.navigation .active').classList.remove('active');
-    e.target.classList.add('active');
-  }
 
-  if(e.target && e.target.nodeName == 'SPAN') {
+  if(e.target && e.target.nodeName == 'A') {
     goToBrew();
-    toggleActive();
   }
 });

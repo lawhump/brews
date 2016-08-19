@@ -146,7 +146,7 @@ footer {
 }
 
 .navigation-container {
-  left: 95%;
+  left: 94%;
   position: absolute;
   top: 50%;
   transform: translateY(-55%);
@@ -155,12 +155,28 @@ footer {
     line-height: 1.15;
   }
 
+  a {
+    display: inline-block;
+    height: 2rem;
+    position: relative;
+    width: 4.4rem;
+
+  }
+
   span {
-    color: #bbb;
-    transition: color .3s ease-out;
+    background-color: #bbb;
+    height: 0.1rem;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: color .3s ease-out,
+                width .3s ease-out;
+    width: 2rem;
 
     &.active {
-      color: #555;
+      background-color: black;
+      width: 3rem;
     }
   }
 }
